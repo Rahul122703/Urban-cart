@@ -1,11 +1,19 @@
 import React from "react";
+import Navbar from "./components/navbar/navbar";
+import Sublinks from "./components/navbar/sublinks";
+import SubSublinks from "./components/navbar/subsublink";
+// import Bgvideo from "./assets/videos/HomePageBg.mp4";
 
 const App = () => {
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-8 rounded-lg shadow-lg text-white font-extrabold text-3xl text-center transform transition-transform duration-300 hover:scale-105 hover:rotate-3 hover:shadow-2xl hover:bg-gradient-to-l hover:from-purple-600 hover:to-blue-500">
-        HEY THIS IS REACT APP
-      </div>
+    <div className="parent_container">
+      {/* <video className="video-bg" autoPlay muted loop>
+        <source src={Bgvideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> */}
+      <Navbar />
+      <Sublinks />
+      <SubSublinks />
     </div>
   );
 };

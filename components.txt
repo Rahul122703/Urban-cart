@@ -1,0 +1,43 @@
+reviews
+infintite scroll
+filter 
+search filter
+slider
+navbar 
+sub menus
+cart
+pagination
+darkmode
+authentication
+video in bg
+also add charts
+
+
+NAVBAR
+Navbar
+├── Home
+├── Shop
+│   ├── Electronics
+│   │   ├── Mobile Phones
+│   │   ├── Laptops
+│   │   └── Cameras
+│   ├── Clothing
+│   │   ├── Men
+│   │   ├── Women
+│   │   └── Kids
+│   ├── Accessories
+│   │   ├── Watches
+│   │   ├── Bags
+│   │   └── Jewelry
+│   └── All Products
+├── About Us
+├── Contact Us
+├── Wishlist
+├── Cart
+└── User Account
+    ├── Login
+    ├── Register
+    ├── Profile
+    │   ├── Orders
+    │   ├── Settings
+    │   └── Logout
