@@ -32,6 +32,7 @@ const NavbarProvider = ({ children }) => {
     const submenuData = navData.find(
       (currentItem) => currentItem.page === navlink.toLowerCase().trim()
     );
+    closeSubSubmenu();
     setNavlink(submenuData);
     setLocation(location);
     console.log(submenuData, "yaha tak ayua hu ");
@@ -45,11 +46,15 @@ const NavbarProvider = ({ children }) => {
         navlink.sublinks.find(
           (currentItem) => currentItem.label === subnavlink.toLowerCase().trim()
         );
-
       setNavSubSublink(subsubmenuData);
       setSubLocation(sublocation);
       setIsSubSubmenuOpen(subsubmenuData.subsubLinks ? true : false);
     }
+  };
+
+  const manageSideBar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+    closeSubmenu();
   };
 
   const closeSubSubmenu = () => {
@@ -77,7 +82,7 @@ const NavbarProvider = ({ children }) => {
         isSubSubmenuOpen,
         navSubSublink,
         sublocation,
-        setIsSidebarOpen,
+        manageSideBar,
         isSidebarOpen,
       }}>
       {children}

@@ -8,7 +8,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import SearchInput from "../searchinput/searchinput";
 
 const Navbar = () => {
-  const { openSubmenu, closeSubmenu, isSidebarOpen, setIsSidebarOpen } =
+  const { openSubmenu, closeSubmenu, isSidebarOpen, manageSideBar } =
     NavbarGlobalContext();
 
   const displaySubmenu = (e, text) => {
@@ -61,17 +61,17 @@ const Navbar = () => {
       </nav>
 
       <nav className="navbar manage-nav-phone-show flex flex-row justify-between min-w-[98vw] items-center z-10">
-        <div
-          className="show-button  text-2xl"
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+        <div className="show-button  text-2xl" onClick={() => manageSideBar()}>
           <FiAlignJustify />
         </div>
         <div className="max-w-[70%]">
           <SearchInput />
         </div>
-        <div className="user-account capitalize font-bold text-3xl flex flex-col justify-center items-center">
+        <div
+          className="user-account capitalize font-bold text-3xl flex flex-col justify-center items-center"
+          onClick={(e) => displaySubmenu(e, "user")}>
           <FaRegUserCircle />
-          <div className="text-lg" onClick={(e) => displaySubmenu(e, "user")}>
+          <div className="text-lg">
             <FaCaretDown />
           </div>
         </div>
