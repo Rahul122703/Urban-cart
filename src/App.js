@@ -2,18 +2,20 @@ import React from "react";
 import Navbar from "./components/navbar/navbar";
 import Sublinks from "./components/navbar/sublinks";
 import SubSublinks from "./components/navbar/subsublink";
-// import Bgvideo from "./assets/videos/HomePageBg.mp4";
+
+import { NavbarProvider } from "./components/context/navbarContext";
+
+import Hero from "./components/hero/hero";
 
 const App = () => {
   return (
     <div className="parent_container">
-      {/* <video className="video-bg" autoPlay muted loop>
-        <source src={Bgvideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
-      <Navbar />
-      <Sublinks />
-      <SubSublinks />
+      <NavbarProvider>
+        <Navbar />
+        <Sublinks />
+        <SubSublinks />
+        <Hero />
+      </NavbarProvider>
     </div>
   );
 };

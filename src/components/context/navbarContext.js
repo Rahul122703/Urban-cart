@@ -7,6 +7,7 @@ const NavbarContext = React.createContext();
 const NavbarProvider = ({ children }) => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [isSubSubmenuOpen, setIsSubSubmenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [navlink, setNavlink] = useState({ page: [], links: [], sublinks: [] });
   const [navSubSublink, setNavSubSublink] = useState({
     page: [],
@@ -27,11 +28,13 @@ const NavbarProvider = ({ children }) => {
   });
 
   const openSubmenu = (navlink, location) => {
+    console.log(`ye pass kiya hai ${navlink}`);
     const submenuData = navData.find(
       (currentItem) => currentItem.page === navlink.toLowerCase().trim()
     );
     setNavlink(submenuData);
     setLocation(location);
+    console.log(submenuData, "yaha tak ayua hu ");
     setIsSubmenuOpen(submenuData.sublinks ? true : false);
   };
 
@@ -74,6 +77,8 @@ const NavbarProvider = ({ children }) => {
         isSubSubmenuOpen,
         navSubSublink,
         sublocation,
+        setIsSidebarOpen,
+        isSidebarOpen,
       }}>
       {children}
     </NavbarContext.Provider>

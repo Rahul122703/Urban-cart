@@ -9,8 +9,11 @@ import {
   FaSignInAlt,
   FaUserPlus,
   FaBoxOpen,
+  FaCogs,
+  FaSignOutAlt,
   FaInfoCircle,
   FaEnvelope,
+  FaUser,
 } from "react-icons/fa";
 import React from "react";
 
@@ -21,7 +24,7 @@ const navData = [
   },
   {
     page: "shop",
-    links: [{ label: "shop", icon: <FaHome />, url: "/" }],
+    links: [{ label: "shop", icon: <FaHome /> }],
 
     sublinks: [
       {
@@ -110,8 +113,8 @@ const navData = [
   },
 
   {
-    page: "user account",
-    links: [{ label: "user account", icon: <FaHome />, url: "/" }],
+    page: "user",
+    links: [{ label: "user account", icon: <FaHome /> }],
     sublinks: [
       {
         label: "login",
@@ -123,23 +126,23 @@ const navData = [
         icon: <FaUserPlus />,
         url: "/user/register",
       },
-      // {
-      //   label: "profile",
-      //   icon: <FaUser />,
-      //   subsubLinks: [
-      //     { label: "orders", icon: <FaBoxOpen />, url: "/user/profile/orders" },
-      //     {
-      //       label: "settings",
-      //       icon: <FaCogs />,
-      //       url: "/user/profile/settings",
-      //     },
-      //     {
-      //       label: "logout",
-      //       icon: <FaSignOutAlt />,
-      //       url: "/user/profile/logout",
-      //     },
-      //   ],
-      // },
+      {
+        label: "profile",
+        icon: <FaUser />,
+        subsubLinks: [
+          { label: "orders", icon: <FaBoxOpen />, url: "/user/profile/orders" },
+          {
+            label: "settings",
+            icon: <FaCogs />,
+            url: "/user/profile/settings",
+          },
+          {
+            label: "logout",
+            icon: <FaSignOutAlt />,
+            url: "/user/profile/logout",
+          },
+        ],
+      },
     ],
   },
 ];
