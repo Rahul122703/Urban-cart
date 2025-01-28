@@ -6,6 +6,7 @@ import { FaCaretDown } from "react-icons/fa";
 import { FiAlignJustify } from "react-icons/fi";
 import { FaRegUserCircle } from "react-icons/fa";
 import SearchInput from "../searchinput/searchinput";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const { openSubmenu, closeSubmenu, isSidebarOpen, manageSideBar } =
@@ -32,21 +33,24 @@ const Navbar = () => {
       <nav
         className="navbar manage-nav-pc-show"
         onMouseOver={handleCloseSubmenu}>
-        <ul className="nav-list">
+        <ul className="nav-list ">
           {navData.map((currentItem, index) => {
             const { page, links } = currentItem;
+
             return (
-              <li className="nav-item" key={index}>
+              <li className="nav-item " key={index}>
                 {links.icon}
                 {links.url ? (
-                  <a
-                    href={links.url}
-                    className="nav-link"
+                  <Link
+                    to={links.url}
+                    className="nav-link cursor-pointer"
                     onMouseOver={displaySubmenu}>
                     {page}
-                  </a>
+                  </Link>
                 ) : (
-                  <div className="nav-link" onMouseOver={displaySubmenu}>
+                  <div
+                    className="nav-link  cursor-default"
+                    onMouseOver={displaySubmenu}>
                     {page}
                   </div>
                 )}
@@ -86,12 +90,12 @@ const Navbar = () => {
               <li className="nav-item" key={index}>
                 {links.icon}
                 {links.url ? (
-                  <a
-                    href={links.url}
+                  <Link
+                    to={links.url}
                     className="nav-link"
                     onClick={(e) => displaySubmenu(e)}>
                     {page}
-                  </a>
+                  </Link>
                 ) : (
                   <div className="nav-link" onClick={(e) => displaySubmenu(e)}>
                     {page}

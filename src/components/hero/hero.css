@@ -4,3 +4,9 @@
     margin-top: 1rem;
   }
 }
+
+.bg-blur {
+  background-image: url("../../assets/hero-left.jpg");
+  filter: blur(2px);
+  /* z-index: -1; */
+}

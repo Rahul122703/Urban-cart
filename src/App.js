@@ -1,23 +1,17 @@
-import React from "react";
-import Navbar from "./components/navbar/navbar";
-import Sublinks from "./components/navbar/sublinks";
-import SubSublinks from "./components/navbar/subsublink";
-
-import { NavbarProvider } from "./components/context/navbarContext";
-
-import Hero from "./components/hero/hero";
+import React, { useEffect, useState } from "react";
+import Loader from "./components/loader/loader";
+import Routers from "./routers";
 
 const App = () => {
-  return (
-    <div className="parent_container">
-      <NavbarProvider>
-        <Navbar />
-        <Sublinks />
-        <SubSublinks />
-        <Hero />
-      </NavbarProvider>
-    </div>
-  );
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  return <div className="parent App">{loading ? <Loader /> : <Routers />}</div>;
 };
 
 export default App;

@@ -28,14 +28,12 @@ const NavbarProvider = ({ children }) => {
   });
 
   const openSubmenu = (navlink, location) => {
-    console.log(`ye pass kiya hai ${navlink}`);
     const submenuData = navData.find(
       (currentItem) => currentItem.page === navlink.toLowerCase().trim()
     );
     closeSubSubmenu();
     setNavlink(submenuData);
     setLocation(location);
-    console.log(submenuData, "yaha tak ayua hu ");
     setIsSubmenuOpen(submenuData.sublinks ? true : false);
   };
 

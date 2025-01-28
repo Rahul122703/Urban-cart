@@ -6,6 +6,8 @@ import { NavbarGlobalContext } from "../context/navbarContext";
 
 import "./hero.css";
 
+// import bgimage from "../../assets/hero-left.jpg";
+
 const Hero = () => {
   const { closeSubmenu } = NavbarGlobalContext();
 
@@ -17,18 +19,20 @@ const Hero = () => {
 
   return (
     <div
-      className="border border-none flex flex-col md:flex md:flex-row mt-1 md:mt-unset p-4 md:p-unset z-1 border border-black relative"
+      className="border border-none flex flex-col md:flex md:flex-row mt-1 md:mt-unset p-4 md:p-unset z-1 relative"
       onMouseOver={handleSubmenu}>
-      <div className="border border-gray-300 min-w-[60%] p-6 rounded-3xl bg-white shadow-md flex flex-col justify-center items-center">
-        <h1 className="text-4xl font-bold text-center text-gray-800 tracking-tight">
-          URBAN CART
-        </h1>
-        <p className="mt-4 text-base text-gray-600 text-center leading-relaxed text-3xl ">
-          Your one-stop shop for all your urban lifestyle needs. Explore our
-          wide range of products tailored just for you.
-        </p>
-        <div className="mt-6 text-center">
-          <button className="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-all duration-200">
+      <div className="min-w-[60%] p-8 rounded-3xl shadow-2xl flex flex-col justify-center items-center bg-white overflow-hidden">
+        <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-3xl filter blur-lg opacity-30 w-full h-full absolute"></div>
+
+        <div className="text-center">
+          <h1 className="text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
+            URBAN CART
+          </h1>
+          <p className="text-lg lg:text-xl font-medium text-gray-700 mb-6">
+            Your one-stop shop for all your urban lifestyle needs. Explore our
+            wide range of products tailored just for you.
+          </p>
+          <button className="cursor-pointer bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 transition duration-300">
             Shop Now
           </button>
         </div>

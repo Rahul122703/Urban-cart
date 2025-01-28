@@ -119,12 +119,12 @@ const navData = [
       {
         label: "login",
         icon: <FaSignInAlt />,
-        url: "/user/login",
+        url: "/login",
       },
       {
         label: "register",
         icon: <FaUserPlus />,
-        url: "/user/register",
+        url: "/register",
       },
       {
         label: "profile",
@@ -134,12 +134,12 @@ const navData = [
           {
             label: "settings",
             icon: <FaCogs />,
-            url: "/user/profile/settings",
+            url: "/profile/settings",
           },
           {
             label: "logout",
             icon: <FaSignOutAlt />,
-            url: "/user/profile/logout",
+            url: "/profile/logout",
           },
         ],
       },

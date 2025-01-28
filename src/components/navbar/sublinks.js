@@ -2,10 +2,17 @@ import React, { useEffect, useRef } from "react";
 import "./navbar.css";
 import { NavbarGlobalContext } from "../context/navbarContext";
 import { FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Sublinks = () => {
-  const { navlink, location, isSubmenuOpen, openSubSubmenu, closeSubSubmenu } =
-    NavbarGlobalContext();
+  const {
+    navlink,
+    location,
+    isSubmenuOpen,
+    openSubSubmenu,
+    closeSubSubmenu,
+    closeSubmenu,
+  } = NavbarGlobalContext();
 
   const container = useRef();
 
@@ -45,7 +52,9 @@ const Sublinks = () => {
               className="sublink_li"
               key={index}
               onMouseOver={displaySubSubmenu}>
-              {currentItem.label}
+              <Link to={currentItem.url ? currentItem.url : null}>
+                {currentItem.label}
+              </Link>
               {currentItem.subsubLinks && <FaChevronRight />}
             </div>
           );

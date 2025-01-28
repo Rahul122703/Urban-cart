@@ -3,7 +3,7 @@ infintite scroll
 filter 
 search filter
 slider
-navbar 
+navbar done 
 sub menus
 cart
 pagination
@@ -11,6 +11,10 @@ darkmode
 authentication
 video in bg
 also add charts
+]
+
+products section tab 
+prduct card
 
 
 NAVBAR
