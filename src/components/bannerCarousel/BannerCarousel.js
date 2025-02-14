@@ -4,7 +4,7 @@ import banner2 from "../../assets/carousel_image/banner2.jpg";
 import banner3 from "../../assets/carousel_image/banner3.jpg";
 import { FaAnglesRight, FaAnglesLeft } from "react-icons/fa6";
 
-const imageData = [banner1, banner2, banner3, banner3, banner3];
+const imageData = [banner1,banner2,banner3];
 
 const BannerCarousel = () => {
   const scrollDiv = useRef(null);
@@ -44,7 +44,7 @@ const BannerCarousel = () => {
   };
 
   return (
-    <div className="w-full relative border border-black mb-4 overflow-hidden">
+    <div className="w-full relative border border-none mb-4 overflow-hidden">
       <button
         className="absolute left-2 top-1/2 -translate-y-1/2 text-white p-2 rounded-full"
         onClick={leftScroll}>
