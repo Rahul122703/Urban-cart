@@ -11,7 +11,6 @@ const Sublinks = () => {
     isSubmenuOpen,
     openSubSubmenu,
     closeSubSubmenu,
-    closeSubmenu,
   } = NavbarGlobalContext();
 
   const container = useRef();
@@ -19,7 +18,7 @@ const Sublinks = () => {
   useEffect(() => {
     const submenu = container.current;
     const { top, bottom, left, right } = location;
-    submenu.style.top = `${top + 10}px`;
+    submenu.style.top = `${top - 2}px`;
     // submenu.style.bottom = `${bottom}px`;
     submenu.style.left = `${left}px`;
     // submenu.style.right = `${right}px`;
@@ -48,15 +47,15 @@ const Sublinks = () => {
       {navlink.sublinks &&
         navlink.sublinks.map((currentItem, index) => {
           return (
-            <div
-              className="sublink_li"
-              key={index}
-              onMouseOver={displaySubSubmenu}>
-              <Link to={currentItem.url ? currentItem.url : null}>
+            <Link to={currentItem.url ? currentItem.url : null}>
+              <div
+                className="sublink_li"
+                key={index}
+                onMouseOver={displaySubSubmenu}>
                 {currentItem.label}
-              </Link>
-              {currentItem.subsubLinks && <FaChevronRight />}
-            </div>
+                {currentItem.subsubLinks && <FaChevronRight />}
+              </div>
+            </Link>
           );
         })}
     </div>
