@@ -3,22 +3,23 @@ import Navbar from "../../components/navbar/navbar";
 import Sublinks from "../../components/navbar/sublinks";
 import SubSublinks from "../../components/navbar/subsublink";
 import Footer from "../../components/footer/Footer";
+import Hero from "../../components/hero/hero";
+import BannerCarousel from "../../components/bannerCarousel/BannerCarousel";
 
 import { NavbarProvider } from "../../components/context/navbarContext";
 
-import Hero from "../../components/hero/hero";
-
 const App = () => {
   return (
-    <div className="parent_container">
+    <>
       <NavbarProvider>
         <Navbar />
         <Sublinks />
         <SubSublinks />
         <Hero />
+        <BannerCarousel />
         <Footer />
       </NavbarProvider>
-    </div>
+    </>
   );
 };
 

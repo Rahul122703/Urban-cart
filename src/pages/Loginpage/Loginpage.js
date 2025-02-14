@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
 import { FaGoogle } from "react-icons/fa6";
+
+import Loader from "../../components/loader/loader";
+
 const Loginpage = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => {
+    setLoading(false);
+  }, 500);
+  return loading ? (
+    <Loader />
+  ) : (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      <div className="font-medium text-xl">
+        <Link to="/">Home</Link>/Login
+      </div>
       <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
           Login

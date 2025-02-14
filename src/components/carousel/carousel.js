@@ -5,7 +5,7 @@ import "./carousel.css";
 const Carousel = ({
   children: slides,
   autoSlide = true,
-  autoSlideInterval = 4000,
+  autoSlideInterval = 6000,
 }) => {
   const [curr, setCurr] = useState(0);
 
@@ -21,7 +21,7 @@ const Carousel = ({
   return (
     <div className="overflow-hidden w-full h-full rounded-3xl mt-[1rem] md:mt-0 z-1">
       <div
-        className={`flex transition-transform ease-out duration-[2s] rounded-3xl`}
+        className={`flex transition-transform ease-out duration-[4s] rounded-3xl`}
         style={{ transform: `translateX(-${curr * 100}%)` }}>
         {slides.map((slide, index) => (
           <div key={index} className="w-full h-full flex-shrink-0 rounded-3xl">

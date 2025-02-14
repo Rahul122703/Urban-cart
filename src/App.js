@@ -10,8 +10,7 @@ const App = () => {
       setLoading(false);
     }, 1000);
   }, []);
-
-  return <div className="parent App">{loading ? <Loader /> : <Routers />}</div>;
+  return <>{loading ? <Loader /> : <Routers />}</>;
 };
 
 export default App;

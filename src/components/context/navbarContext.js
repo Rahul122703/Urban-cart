@@ -34,6 +34,7 @@ const NavbarProvider = ({ children }) => {
     closeSubSubmenu();
     setNavlink(submenuData);
     setLocation(location);
+    console.log(submenuData);
     setIsSubmenuOpen(submenuData.sublinks ? true : false);
   };
 

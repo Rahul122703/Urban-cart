@@ -5,20 +5,15 @@ import { FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Sublinks = () => {
-  const {
-    navlink,
-    location,
-    isSubmenuOpen,
-    openSubSubmenu,
-    closeSubSubmenu,
-  } = NavbarGlobalContext();
+  const { navlink, location, isSubmenuOpen, openSubSubmenu, closeSubSubmenu } =
+    NavbarGlobalContext();
 
   const container = useRef();
 
   useEffect(() => {
     const submenu = container.current;
     const { top, bottom, left, right } = location;
-    submenu.style.top = `${top - 2}px`;
+    submenu.style.top = `${top + 20}px`;
     // submenu.style.bottom = `${bottom}px`;
     submenu.style.left = `${left}px`;
     // submenu.style.right = `${right}px`;
